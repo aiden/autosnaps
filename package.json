@@ -1,0 +1,9 @@
+{
+  "name": "autosnaps",
+  "version": "0.0.0",
+  "description": "An npm library for automatically collecting fixtures for snapshot tests that integrates easily with popular test runners",
+  "main": "dist/index.js",
+  "repository": "git@github.com:aiden/autosnaps.git",
+  "author": "aiden.ai",
+  "license": "MIT"
+}
