@@ -1,0 +1,25 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-config-airbnb", "tslint-config-prettier"],
+  "linterOptions": { "exclude": ["**/node_modules"] },
+  "rules": {
+    "ban": [
+      true,
+      "eval",
+      ["describe", "only", "Don't focus tests."],
+      ["it", "only", "Don't focus tests."]
+    ],
+    "completed-docs": [
+      true,
+      {
+        "functions": { "visibilities": ["exported"] },
+        "classes": { "visibilities": ["exported"] },
+        "methods": { "privacies": ["public"] },
+        "interfaces": { "visibilities": ["exported"] },
+        "enums": { "visibilities": ["exported"] },
+        "properties": { "privacies": ["public"] },
+        "types": { "visibilities": ["exported"] }
+      }
+    ]
+  }
+}
