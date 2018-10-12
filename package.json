@@ -5,5 +5,11 @@
   "main": "dist/index.js",
   "repository": "git@github.com:aiden/autosnaps.git",
   "author": "aiden.ai",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
 }
