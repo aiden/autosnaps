@@ -1,0 +1,24 @@
+// Remember to use the workspace TS
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        // This just means that any import will follow these resolution rules
+        "./*" // Imports will be resolved from the src directory
+      ]
+    },
+    "alwaysStrict": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "pretty": true,
+    "declaration": true,
+    "outDir": "../dist/"
+  }
+}

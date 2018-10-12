@@ -7,9 +7,15 @@
   "author": "aiden.ai",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "yarn test:unit && yarn test:integration",
+    "build": "tsc -p src",
+    "test:unit": "jest --testPathPattern='__test__/unit/.*\\.test\\.ts$'",
+    "test:integration": "yarn build && jest --testPathPattern='__test__/integration/.*\\.test\\.ts$'"
   },
   "devDependencies": {
-    "jest": "^23.6.0"
+    "@types/jest": "^23.3.5",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.1.3"
   }
 }
