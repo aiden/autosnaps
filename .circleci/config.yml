@@ -2,6 +2,7 @@ version: 2
 jobs:
   build:
     docker:
+      # Oldest LTS Node version
       - image: circleci/node:6
 
     working_directory: ~/repo
@@ -22,3 +23,5 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: yarn test
