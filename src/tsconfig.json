@@ -19,6 +19,7 @@
     "strict": true,
     "pretty": true,
     "declaration": true,
-    "outDir": "../dist/"
+    "outDir": "../dist/",
+    "module": "commonjs"
   }
 }

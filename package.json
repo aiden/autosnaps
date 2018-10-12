@@ -6,10 +6,15 @@
   "repository": "git@github.com:aiden/autosnaps.git",
   "author": "aiden.ai",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p src",
     "test": "yarn test:unit && yarn test:integration",
     "lint": "prettier -l '{src,__test__}/**/*' && tslint -p src/tsconfig.json '{src,__test__}/**/*.ts'",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "yarn clean && yarn build && yarn test",
     "lint:write": "prettier --write '{src,__test__}/**/*' && tslint --fix -p src/tsconfig.json '{src,__test__}/**/*.ts'",
     "test:unit": "jest --testPathPattern='__test__/unit/.*\\.test\\.ts$'",
     "test:integration": "yarn build && jest --testPathPattern='__test__/integration/.*\\.test\\.ts$'"
