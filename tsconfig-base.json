@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        // This just means that any import will follow these resolution rules
+        "src/*", // Imports will be resolved from the src directory
+        "__test__/*" // Imports will also be resolved from test directory
+      ]
+    },
+    "alwaysStrict": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "pretty": true,
+    "composite": true
+  }
+}
