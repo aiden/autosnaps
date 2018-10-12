@@ -7,15 +7,20 @@
   "author": "aiden.ai",
   "license": "MIT",
   "scripts": {
-    "test": "yarn test:unit && yarn test:integration",
     "build": "tsc -p src",
+    "test": "yarn test:unit && yarn test:integration",
+    "lint": "prettier --write '{src,__test__}/**/*' && tslint -p src/tsconfig.json '{src,__test__}/**/*.ts'",
     "test:unit": "jest --testPathPattern='__test__/unit/.*\\.test\\.ts$'",
     "test:integration": "yarn build && jest --testPathPattern='__test__/integration/.*\\.test\\.ts$'"
   },
   "devDependencies": {
     "@types/jest": "^23.3.5",
     "jest": "^23.6.0",
+    "prettier": "^1.14.3",
     "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.1.3"
   }
 }

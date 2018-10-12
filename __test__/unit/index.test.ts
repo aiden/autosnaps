@@ -1,5 +1,5 @@
-import { sum } from "../../src/index";
+import { sum } from '../../src/index';
 
-it("adds", () => {
+it('adds', () => {
   expect(sum(1, 1)).toBe(2);
 });
