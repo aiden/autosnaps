@@ -2,10 +2,6 @@
 
 # Built source files
 dist
-# Built test files
-__test__/*.d.ts
-__test__/*.js
-
 
 # Created by https://www.gitignore.io/api/node
 
