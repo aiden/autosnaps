@@ -9,8 +9,13 @@ export function withSnapshot<T extends Function>(fn: T): T {
   // Luckily we aren't really doing any logic in there that has anything to do with the input or
   // output, so we don't really need the static typing.
   return (function(...args: any[]) {
+    recordFixture(args);
     // Just telling Typescript that we know what we're doing by passing through an implicit any `this`
     // @ts-ignore
     return fn.call(this, ...args);
   } as any) as T;
+}
+
+function recordFixture(args: any[]): void {
+  console.log(JSON.stringify(args));
 }
