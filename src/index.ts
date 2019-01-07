@@ -1,3 +1,4 @@
+import { core as storeSnapshot } from 'snap-shot-core';
 /**
  * The main feature of Autosnaps, call this on the function you want
  * to snapshot test and use the function withSnapshot outputs as a substitute.
@@ -17,5 +18,8 @@ export function withSnapshot<T extends Function>(fn: T): T {
 }
 
 function recordFixture(args: any[]): void {
+  storeSnapshot({
+    args,
+  });
   console.log(JSON.stringify(args));
 }
